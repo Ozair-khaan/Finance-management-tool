@@ -24,7 +24,7 @@ public class TransactionController {
         return ResponseEntity.ok("Transaction saved successfully");
     }
 
-    public List<Transaction> getTransaction(@PathVariable Long userId){
+    public List<Transaction> getTransaction(@PathVariable Long userId) {
         User user = new User();
         user.setId(userId);
         return transactionService.getTransactionByUser(user);

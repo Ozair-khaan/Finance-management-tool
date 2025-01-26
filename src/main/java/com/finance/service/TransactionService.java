@@ -14,11 +14,11 @@ public class TransactionService {
     @Autowired
     private TransactionRepository transactionRepository;
 
-    public List<Transaction> getTransactionByUser(User user){
-        return  transactionRepository.findByUser(user);
+    public List<Transaction> getTransactionByUser(User user) {
+        return transactionRepository.findByUser(user);
     }
 
-    public void addTransaction(Transaction transaction){
+    public void addTransaction(Transaction transaction) {
         transactionRepository.save(transaction);
     }
 }
